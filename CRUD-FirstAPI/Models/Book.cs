@@ -2,10 +2,18 @@
 {
     public class Book
     {
-        public int ID { get; set; }
-        public string Title { get; set; } = null!;
-        public string Author { get; set; } = null!;
-        public int YearPublished { get; set; }
+        public Book(int id, string title, string author, int yearPublished)
+        {
+            Id = id;
+            Title = title;
+            Author = author;
+            YearPublished = yearPublished;
+        }
+      
+        public int Id { get; }
+        public string Title { get; } = null!;
+        public string Author { get; } = null!;
+        public int YearPublished { get; }
 
     }
 }
