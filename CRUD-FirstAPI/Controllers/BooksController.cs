@@ -27,10 +27,21 @@ namespace CRUD_FirstAPI.Controllers
         {
             var book = Books.FirstOrDefault(x => x.Id == id);
             if (book == null)
-               return NotFound(null);
+               return BadRequest();
             
             return Ok(book);
             
+        }
+        [HttpPost]
+        public ActionResult<Book> AddBook(Book newBook)
+        {
+            if (newBook == null)
+                return BadRequest("Books Can't be null");
+            if (Books.Any(b => b.Id == newBook.Id))
+                return Conflict("This book already exist");
+
+            Books.Add(newBook);
+            return CreatedAtAction(nameof(GetBookById), new {id = newBook.Id}, newBook);
         }
         
 

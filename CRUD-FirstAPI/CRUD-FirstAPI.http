@@ -12,4 +12,12 @@ GET {{rootURL}}/api/books/1
 accept: application/json
 
 ###
+POST {{rootURL}}/api/books
+Content-Type: application/json
+{
+  "id": 6,
+  "title": "Bible",
+  "author": "Mankind",
+  "yearPublished": 1
+}
 
