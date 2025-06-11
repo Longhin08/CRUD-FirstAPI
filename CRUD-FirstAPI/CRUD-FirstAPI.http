@@ -20,4 +20,14 @@ Content-Type: application/json
   "author": "Mankind",
   "yearPublished": 1
 }
-
+###
+PUT {{rootURL}}/api/books/5
+Content-Type: application/json
+{
+  "id": 5,
+  "title": "Bible",
+  "author": "Mankind",
+  "yearPublished": 1
+}
+###
+DELETE {{rootURL}}/api/books/2

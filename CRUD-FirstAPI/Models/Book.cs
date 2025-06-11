@@ -10,10 +10,10 @@
             YearPublished = yearPublished;
         }
       
-        public int Id { get; }
-        public string Title { get; } = null!;
-        public string Author { get; } = null!;
-        public int YearPublished { get; }
+        public int Id { get; set; }
+        public string Title { get; set; } = null!;
+        public string Author { get; set; } = null!;
+        public int YearPublished { get; set; }
 
     }
 }
